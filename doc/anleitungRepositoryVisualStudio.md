@@ -1,7 +1,7 @@
-## Bei vorhandender Repository
+## Bei vorhandender Repository (Repository auf lokalem Rechner vorhanden)
 ![TestImage](images/openLocalRepositories.png)
 
-## Clone Repository
+## Clone Repository (Repository auf lokalem Rechner nicht vorhanden)
 Bei erstmaliger Verwendung der Repository
 
 ![TestImage](images/cloneRepository.png)
@@ -19,4 +19,4 @@ Repository Link kopieren für Visual Studio <br>
 ## Commit und Push
 ![TestImage](images/commitPush.png)
 
-Falls Änderungen vorhanden sind Commit All und anschließend Push auswählen.
+Falls Änderungen vorhanden sind Commit All (Meilenstein erstellen) und anschließend Push (zum  hochladen) auswählen.
