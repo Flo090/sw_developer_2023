@@ -25,11 +25,7 @@ namespace TeilnehmerVerwaltung_v2
             // - verwenden sie Farben
             // - Teilnehmerdaten sollen nach der Eingabe tabellarisch ausgegeben werden
 
-            string name = string.Empty;
-            string vorname = string.Empty;
-            DateTime geburtsdatum = DateTime.MinValue;
-            int plz = 0;
-            string ort = string.Empty;
+            Teilnehmer teilnehmer = new Teilnehmer();
             string headerText = "Teilnehmer Verwaltung v2.0   (c) 2023 Wifi-Soft";
 
             // Header
@@ -37,21 +33,31 @@ namespace TeilnehmerVerwaltung_v2
 
             // Daten einlesen
             Console.WriteLine("Bitte geben Sie die Teilnehmerdaten ein: ");
-
-            vorname = ReadString("\tVorname: ");
-            name = ReadString("\tNachname: ");
-            geburtsdatum = ReadDateTime("\tGeburtsdatum: ");    // Eingabe Geburtsdatum => Methode weil komplex
-            plz = ReadInt("\tPLZ: ");                           // Eingabe PLZ => Methode weil komplex
-            ort = ReadString("\tWohnort: ");
+            teilnehmer = GetStudentInfos();
 
             // Ausgabe der Daten
-            DisplayStudentInfo(vorname, name, geburtsdatum, plz, ort);
+            DisplayStudentInfo(teilnehmer);
+
+            //SaveStudentInfosToFile(teilnehmer, "meineTeilnehmerDaten.json");
         }
 
-        private static void DisplayStudentInfo(string vorname, string name, DateTime geburtsdatum, int plz, string ort)
+        private static Teilnehmer GetStudentInfos()
+        {
+            Teilnehmer teilnehmer;
+
+            teilnehmer.Name = ReadString("\tVorname: ");
+            teilnehmer.Nachname = ReadString("\tNachname: ");
+            teilnehmer.Geburtsdatum = ReadDateTime("\tGeburtsdatum: ");    // Eingabe Geburtsdatum => Methode weil komplex
+            teilnehmer.Plz = ReadInt("\tPLZ: ");                           // Eingabe PLZ => Methode weil komplex
+            teilnehmer.Ort = ReadString("\tWohnort: ");
+
+            return teilnehmer;
+        }
+
+        private static void DisplayStudentInfo(Teilnehmer studentInfo)
         {
             Console.WriteLine("\nDie Teilnehmerdaten: \n");
-            Console.WriteLine($"\t{vorname}, {name}, {geburtsdatum.ToShortDateString()}, {plz}, {ort}");
+            Console.WriteLine($"\t{studentInfo.Name}, {studentInfo.Nachname}, {studentInfo.Geburtsdatum.ToShortDateString()}, {studentInfo.Plz}, {studentInfo.Ort}");
         }
 
         private static string ReadString(string inputPrompt)
