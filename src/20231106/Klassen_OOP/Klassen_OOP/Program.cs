@@ -36,6 +36,7 @@ namespace Klassen_OOP
             //myBook.StartBorrowingDate = new DateTime(2024, 2, 28);
 
             aBook.DisplayInfo();
+            //aBook.Title = "Test";
             
 
             //myBook.EndBorrowing();

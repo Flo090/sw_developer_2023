@@ -10,9 +10,11 @@ namespace Employee
     {
         static void Main(string[] args)
         {
-            Employee myEmployee = new Employee("Max Mustermann");
+            Employee myEmployee = new Employee("Max Mustermann", new DateTime(1980,5,20));
 
             myEmployee.ShowInfo();
+
+            Console.WriteLine($"Geburtsjahr: {myEmployee.BirthYear}");
         }
     }
 }

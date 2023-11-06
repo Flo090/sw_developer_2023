@@ -8,26 +8,51 @@ namespace Employee
 {
     internal class Employee
     {
-        public string Name;
-        public Guid Id;
+        private string _name;
+        private DateTime _birthdate;
+        private Guid _id;
 
-        public Employee(string name)
+        public Employee(string name, DateTime birthdate)
         {
-            Name = name;
-            Id = Guid.NewGuid();
+            _name = name;
+            _birthdate = birthdate;
+            _id = Guid.NewGuid();
         }
 
-        public Employee(Guid id, string name)
+        public Employee(Guid id, string name, DateTime birthdate)
         {
-            Id = id;
-            Name = name;
+            _id = id;
+            _name = name;
+            _birthdate = birthdate;
         }
 
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+        }
+        public int BirthYear
+        {
+            get
+            {
+                return _birthdate.Year;
+            }
+        }
+        public Guid Id
+        {
+            get
+            {
+                return _id;
+            }
+        }
         public void ShowInfo()
         {
             Console.WriteLine("Employee");
-            Console.WriteLine($"Name:\t{Name}");
-            Console.WriteLine($"Id:\t{Id}");
+            Console.WriteLine($"Name:\t{_name}");
+            Console.WriteLine($"Id:\t{_id}");
+            Console.WriteLine($"Geburtsdatum:\t{_birthdate.ToShortDateString()}");
         }
     }
 }
