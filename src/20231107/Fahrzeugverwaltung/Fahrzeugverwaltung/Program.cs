@@ -17,7 +17,7 @@ namespace Fahrzeugverwaltung
                 new Vehicle("Schoolbus", ConsoleColor.Yellow,95,130),
                 new Bike("Moto Cross", 10, 100, ConsoleColor.Red, 220),
                 new Bike()
-        };
+            };
 
             foreach (var vehicle in myVehicleList)
             {
