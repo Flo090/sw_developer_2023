@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wifi.Playlist.FormsUI", "Wifi.Playlist.FormsUI\Wifi.Playlist.FormsUI.csproj", "{2F4976A0-0F90-4D65-BDCC-E88E703ADF51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wifi.Playlist.CoreTypes", "Wifi.Playlist.CoreTypes\Wifi.Playlist.CoreTypes.csproj", "{2B22F812-1B16-4AE4-B76A-50A329264BEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wifi.Playlist.Items", "Wifi.Playlist.Items\Wifi.Playlist.Items.csproj", "{5301F5CE-193B-491E-8C8A-91AAC936309B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wifi.Playlist.Repositories", "Wifi.Playlist.Repositories\Wifi.Playlist.Repositories.csproj", "{4CE85CA0-0A97-4C1F-B040-404B99E580A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2F4976A0-0F90-4D65-BDCC-E88E703ADF51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F4976A0-0F90-4D65-BDCC-E88E703ADF51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F4976A0-0F90-4D65-BDCC-E88E703ADF51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F4976A0-0F90-4D65-BDCC-E88E703ADF51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B22F812-1B16-4AE4-B76A-50A329264BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B22F812-1B16-4AE4-B76A-50A329264BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B22F812-1B16-4AE4-B76A-50A329264BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B22F812-1B16-4AE4-B76A-50A329264BEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5301F5CE-193B-491E-8C8A-91AAC936309B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5301F5CE-193B-491E-8C8A-91AAC936309B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5301F5CE-193B-491E-8C8A-91AAC936309B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5301F5CE-193B-491E-8C8A-91AAC936309B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CE85CA0-0A97-4C1F-B040-404B99E580A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE85CA0-0A97-4C1F-B040-404B99E580A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE85CA0-0A97-4C1F-B040-404B99E580A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE85CA0-0A97-4C1F-B040-404B99E580A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C34994F5-CBBF-4BC7-80CB-5C98DD480A48}
+	EndGlobalSection
+EndGlobal
