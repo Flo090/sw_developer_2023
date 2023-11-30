@@ -35,7 +35,7 @@ namespace Wifi.Playlist.Items
             {
                 Image image = null;
 
-                if (_tagfile.Tag.Pictures != null || _tagfile.Tag.Pictures.Length > 0)
+                if (_tagfile.Tag.Pictures != null && _tagfile.Tag.Pictures.Length > 0)
                 {
                     image = Image.FromStream(new MemoryStream(_tagfile.Tag.Pictures[0].Data.Data));
                     image = image.GetThumbnailImage(128, 128, null, IntPtr.Zero);
@@ -48,5 +48,10 @@ namespace Wifi.Playlist.Items
         public string Description => "MP3 music file";
 
         public string Extension => ".mp3";
+
+        public override string ToString()
+        {
+            return $"{Title} [{Author}]";
+        }
     }
 }
