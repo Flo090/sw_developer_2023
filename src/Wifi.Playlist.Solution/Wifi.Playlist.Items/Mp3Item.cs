@@ -18,6 +18,10 @@ namespace Wifi.Playlist.Items
 
         public Mp3Item(string filePath)
         {
+            if (string.IsNullOrEmpty(filePath))
+            {
+                return;
+            }
             _filePath = filePath;
             _tagfile = TagLib.File.Create(_filePath);
         }
