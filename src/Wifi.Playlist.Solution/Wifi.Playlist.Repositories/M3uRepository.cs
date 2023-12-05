@@ -12,13 +12,65 @@ namespace Wifi.Playlist.Repositories
 {
     public class M3uRepository : IPlaylistRepository
     {
+        private readonly IPlaylistItemFactory _playlistItemFactory;
+
         public string Description => "M3U file";
 
+        public M3uRepository(IPlaylistItemFactory playlistItemFactory)
+        {
+            _playlistItemFactory = playlistItemFactory;
+        }
         public string Extension => ".m3u";
 
         public IPlaylist Load(string filePath)
         {
-            throw new NotImplementedException();
+            string title = string.Empty;
+            string author = string.Empty;
+            string createAt = string.Empty;
+
+            IPlaylist domainPlaylist = null;
+
+            if (string.IsNullOrEmpty(filePath))
+            {
+                return null;
+            }
+
+            StreamReader sr = new StreamReader(filePath);
+            
+
+            var content = new M3uContent();
+            var playlistEntity = content.GetFromStream(sr.BaseStream);
+
+            //read meta data first
+            foreach (var entry in playlistEntity.PlaylistEntries)
+            {
+                if (entry.Comments.Count > 0)
+                {
+                    title = GetCommentValue(entry.Comments, "#Title:");
+                    author = GetCommentValue(entry.Comments, "#Author:");
+                    createAt = GetCommentValue(entry.Comments, "#CreatedAt:");
+
+                    break;
+                }
+            }
+
+            domainPlaylist = new Playlist.CoreTypes.Playlist(title, author, DateTime.Parse(createAt));
+            foreach (var entry in playlistEntity.PlaylistEntries)
+            {
+                var playlistItem = _playlistItemFactory.Create(entry.Path);
+                if (playlistItem != null)
+                {
+                    domainPlaylist.Add(playlistItem);
+                }
+            }
+            return domainPlaylist;
+        }
+
+        private string GetCommentValue(IEnumerable<string> commentList, string valueKey)
+        {
+            var valueLine = commentList.Where(x => x.StartsWith(valueKey)).FirstOrDefault();
+
+            return valueLine.Replace(valueKey, string.Empty);
         }
 
         public void Save(IPlaylist playlist, string filePath)
