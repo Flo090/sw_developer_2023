@@ -17,8 +17,8 @@ namespace Wifi.Playlist.Factories
             {
                 return new IFileInfo[]
                 {
-                    new Mp3Item(string.Empty)
-                    //new JpgPictureItem(string.Empty)
+                    new Mp3Item(string.Empty),
+                    new JpegItem(string.Empty)
                     //new PngPictureItem(string.Empty)
                     //new BmpPictureItem(string.Empty)
                 };
@@ -38,7 +38,8 @@ namespace Wifi.Playlist.Factories
                     break;
 
                 case ".jpg":
-                    //item = new JpgPictureItem(fileName);
+                case ".jpeg":
+                    item = new JpegItem(fileName);
                     break;
 
                 case ".png":

@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JpegItem.cs" />
     <Compile Include="Mp3Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

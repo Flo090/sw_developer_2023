@@ -1,0 +1,25 @@
+#EXTM3U
+##Title:Super Hits 2001
+##Author:Max Mustermann
+##CreatedAt:06.12.2023
+#EXTART:Bruno Mars
+#EXTINF:222,Grenade
+C:\myCode\Repos\sw_developer_2023\DemoFiles\001 - Bruno Mars - Grenade.mp3
+#EXTART:Camo & Krooked
+#EXTINF:203,Broken Pieces (feat. Nihils)
+C:\myCode\Repos\sw_developer_2023\DemoFiles\01 - Broken Pieces (feat. Nihils).mp3
+#EXTART:Adele
+#EXTINF:227,Rolling in the deep
+C:\myCode\Repos\sw_developer_2023\DemoFiles\003 - Adele - Rolling in the deep.mp3
+#EXTART:Taio Cruz feat. Kylie Minogue
+#EXTINF:187,Higher
+C:\myCode\Repos\sw_developer_2023\DemoFiles\005 - Taio Cruz feat. Kylie Minogue - Higher.mp3
+#EXTART:DEVELOPERPC-03\User
+#EXTINF:10,audiR8
+C:\myCode\Repos\sw_developer_2023\DemoFiles\audiR8.jpeg
+#EXTART:DEVELOPERPC-03\User
+#EXTINF:10,bugattiVeyron
+C:\myCode\Repos\sw_developer_2023\DemoFiles\bugattiVeyron.jpeg
+#EXTART:DEVELOPERPC-03\User
+#EXTINF:10,ferarri
+C:\myCode\Repos\sw_developer_2023\DemoFiles\ferarri.jpeg

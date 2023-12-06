@@ -63,6 +63,7 @@ namespace Wifi.Playlist.Repositories
                     domainPlaylist.Add(playlistItem);
                 }
             }
+            sr.Close();
             return domainPlaylist;
         }
 
@@ -77,6 +78,10 @@ namespace Wifi.Playlist.Repositories
         {
             M3uPlaylist m3uPlaylist = new M3uPlaylist();
             m3uPlaylist.IsExtended = true;
+
+            m3uPlaylist.Comments.Add($"#Title:{playlist.Name}");
+            m3uPlaylist.Comments.Add($"#Author:{playlist.Author}");
+            m3uPlaylist.Comments.Add($"#CreatedAt:{playlist.CreatedAt.ToShortDateString()}");
 
             foreach (IPlaylistItem item in playlist.Items)
             {
