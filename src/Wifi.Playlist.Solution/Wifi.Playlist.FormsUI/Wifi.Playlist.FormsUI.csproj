@@ -108,6 +108,10 @@
       <Project>{A6663FDE-95EE-4D81-8FE1-0BD8147D558E}</Project>
       <Name>Wifi.Playlist.Factories</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Wifi.Playlist.WeatherExtension\Wifi.Playlist.WeatherExtension.csproj">
+      <Project>{0316F2DF-675B-4B21-80F1-D75576001B98}</Project>
+      <Name>Wifi.Playlist.WeatherExtension</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\noImage.jpg" />
