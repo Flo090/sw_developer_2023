@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Wifi.Playlist.CoreTypes;
 using Wifi.Playlist.Repositories;
+using Wifi.Playlist.Repositories.Json;
 
 namespace Wifi.Playlist.Factories
 {
@@ -20,7 +21,8 @@ namespace Wifi.Playlist.Factories
         }
         public IEnumerable<IFileInfo> AvailableTypes => new IFileInfo[]
         {
-            new M3uRepository(null)
+            new M3uRepository(null),
+            new JsonRepository(null)
         };
 
         public IPlaylistRepository Create(string fileName)
@@ -38,6 +40,10 @@ namespace Wifi.Playlist.Factories
             {
                 case ".m3u":
                     repository = new M3uRepository(_itemFactory);
+                    break;
+
+                case ".wifi":
+                    repository = new JsonRepository(_itemFactory);
                     break;
             }
             return repository;
