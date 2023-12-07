@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wifi.Playlist.Items.Test", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wifi.Playlist.Factories", "Wifi.Playlist.Factories\Wifi.Playlist.Factories.csproj", "{A6663FDE-95EE-4D81-8FE1-0BD8147D558E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wifi.Playlist.WeatherExtension", "Wifi.Playlist.WeatherExtension\Wifi.Playlist.WeatherExtension.csproj", "{0316F2DF-675B-4B21-80F1-D75576001B98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{A6663FDE-95EE-4D81-8FE1-0BD8147D558E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6663FDE-95EE-4D81-8FE1-0BD8147D558E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6663FDE-95EE-4D81-8FE1-0BD8147D558E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0316F2DF-675B-4B21-80F1-D75576001B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0316F2DF-675B-4B21-80F1-D75576001B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0316F2DF-675B-4B21-80F1-D75576001B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0316F2DF-675B-4B21-80F1-D75576001B98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
